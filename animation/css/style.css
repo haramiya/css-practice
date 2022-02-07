@@ -20,6 +20,7 @@ body {
 .box2 {
   width: 100px;
   height: 100px;
+  margin-top: 24px;
   background-color: blue;
 
   /* 変化前と変化後の動きを補完する */
@@ -47,4 +48,46 @@ body {
 
   /* 回転してから移動する */
   transform: rotate(30deg) translateX(100px);
+}
+
+.box3 {
+  width: 100px;
+  height: 100px;
+  margin-top: 24px;
+  background-color: red;
+
+  transition-property: transform, background;
+
+  /* 0.3秒がよく使われる */
+  transition-duration: .3s;
+
+  /* アニメーションが開始する前に1秒 */
+  /* transition-delay: 1s; */
+}
+
+.box3:hover {
+  transform: translateX(30px);
+  background: skyblue;
+}
+
+.box4 {
+  width: 100px;
+  height: 100px;
+  margin-top: 24px;
+  background-color: yellow;
+
+  transition-property: transform, background;
+  transition-duration: 0.3s;
+
+  /* もっと細かくするには、cubic-bezierで指定 */
+  /* chrome-developerで編集できる */
+  /* transition-timing-function: ease-in; */
+
+  /* transition一括指定 */
+  transition: transform .3s ease-out 1s, background .5s
+}
+
+.box4:hover {
+  transform: translateX(30px);
+  background: black;
 }
