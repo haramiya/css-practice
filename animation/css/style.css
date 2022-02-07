@@ -91,3 +91,42 @@ body {
   transform: translateX(30px);
   background: black;
 }
+
+.box5 {
+  width: 100px;
+  height: 100px;
+  margin-top: 24px;
+  background: green;
+
+  animation-name: move;
+  animation-duration: 2s;
+  animation-delay: 1s;
+
+  /* アニメーションが終わった後もそのままの状態にする */
+  animation-fill-mode: forwards;
+  /* アニメーションを2回繰り返す */
+  animation-iteration-count: 2;
+  /* 再生し終わった後、折り返して再生する */
+  /* animation-direction: alternate; */
+  /* 逆再生する */
+  /* animation-direction: reverse; */
+  /* 再生し終わった後、折り返して逆再生する */
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move {
+  /* 最初の状態 */
+  0% {
+    transform: none;
+  }
+
+  /* 再生してから80%の時点 */
+  80% {
+    transform: translateX(200px) rotate(360deg);
+  }
+
+  /* 再生してから100%の時点 */
+  100% {
+    transform: translateX(300px) rotate(360deg);
+  }
+}
