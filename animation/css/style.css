@@ -16,3 +16,35 @@ body {
 .box:hover {
   border-radius: 50%;
 }
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+
+  /* 変化前と変化後の動きを補完する */
+  transition-property: transform;
+  /* 1秒かけて変化するよう設定 */
+  transition-duration: 1s;
+
+  /* transformの起点を左上に変更する */
+  transform-origin: top left;
+}
+
+.box2:hover {
+  /* X軸方向に50px, Y方向に20px移動 */
+  /* transform: translate(50px, 20px); */
+
+  /* 30度回転する */
+  /* transform: rotate(30deg); */
+
+  /* X方向に半分、縦に2倍にリサイズする */
+  /* transform: scale(.5, 2) */
+
+  /* 同時に適用するには、下記のように書く */
+  /* 移動してから回転する */
+  /* transform: translateX(100px) rotate(30deg); */
+
+  /* 回転してから移動する */
+  transform: rotate(30deg) translateX(100px);
+}
