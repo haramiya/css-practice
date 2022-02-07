@@ -1,0 +1,18 @@
+body {
+  padding: 64px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+
+  /* 変化前と変化後の動きを補完する */
+  transition-property: border-radius;
+  /* 1秒かけて変化するよう設定 */
+  transition-duration: 1s;
+}
+
+.box:hover {
+  border-radius: 50%;
+}
